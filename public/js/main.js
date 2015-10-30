@@ -3,4 +3,4 @@
  */
 // public/js/main.js
 
-angular.module('nutri', []);
+angular.module('nutri', ['diretivas']);

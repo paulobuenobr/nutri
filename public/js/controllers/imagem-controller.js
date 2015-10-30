@@ -5,6 +5,7 @@
 
 angular.module('nutri').controller('ImagemController', function($scope, $http) {
     $scope.imagens = [];
+    $scope.filtro = '';
     $http.get('/v1/imagens')
         .success(function(retorno) {
             console.log(retorno);

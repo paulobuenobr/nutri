@@ -8,9 +8,11 @@ angular.module('diretivas', [])
     .directive('painelImagens', function() {
         var ddo = {};
         ddo.restrict = "AE";
+        ddo.transclude = true;
+
         ddo.scope = {
           titulo: '@'
         };
-        ddo.template = 'js/directives/painel-imagens.html';
+        ddo.templateUrl = 'js/directives/painel-imagens.html';
         return ddo;
 });
