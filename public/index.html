@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="nutri">
+<head>
+    <!--<meta charset="UTF-8">-->
+    <title>NutriAngular</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/imagem-controller.js"></script>
+    <script src="js/controllers/diretivas.js"></script>
+</head>
+<body ng-controller="ImagemController">
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="text-center">NutriAngular</h1>
+        </div>
+
+        <div class="panel panel-success col-md-2" ng-repeat="imagem in imagens">
+            <div class="panel-heading">
+                <h3 class="panel-title text-center">{{imagem.titulo}}</h3>
+            </div>
+            <div class="panel-body">
+                <img class="img-responsive center-block" style="width: 90px; height: 100px" src="{{imagem.url}}" alt="{{imagem.titulo}}">
+            </div><!-- fim panel-body -->
+        </div><!-- fim panel panel-default -->
+    </div>
+</body>
+</html>
